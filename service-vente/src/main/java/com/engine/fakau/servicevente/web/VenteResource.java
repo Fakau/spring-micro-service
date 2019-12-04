@@ -46,8 +46,8 @@ public class VenteResource {
 	public List<Vente> getAll() {
 		return renteRepository.findAll();
 	}
-	@DeleteMapping("/vente/id")
-	public void getAll(@PathParam("id") Long id) {
+	@DeleteMapping("/vente/{id}")
+	public void getAll(@PathVariable("id") Long id) {
 		 renteRepository.deleteById(id);
 	}
 
